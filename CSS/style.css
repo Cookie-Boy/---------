@@ -1,3 +1,4 @@
+@import url("fonts.css");
 * {
 	margin: 0;
 	padding: 0;
@@ -25,11 +26,14 @@ body {
     background-repeat: no-repeat;
     align-content: center;
     text-align: center; 
-    vertical-align: middle;
     font-size: xx-large;
-    font-family: 'LasagnaBlack';
+    font-family: 'LexingtonC';
     color: white;
     min-height: 100%;
+}
+
+.headerText {
+    margin-top: 200px;
 }
 
 /* Slider wrapper*/
