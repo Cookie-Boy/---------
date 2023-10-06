@@ -1,0 +1,32 @@
+@import url("../fonts/LasagnaBlack.ttf");
+
+body {
+    background-image: url("../images/background.jpg");
+    /* background-size: cover;
+    /* background-repeat: no-repeat;
+    background-position: center; */
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    /* display: block;  */
+    position: absolute; 
+    width: 100%;
+    background-image: url("../images/header_page/header_2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-content: center;
+    text-align: center;
+    font-size: xx-large;
+    font-family: 'LasagnaBlack';
+    color: white;
+    min-height: 100%;
+}
+
+@font-face {
+    font-family: "LasagnaBlack.ttf"; 
+    src: url("../fonts/LasagnaBlack.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+  } 
