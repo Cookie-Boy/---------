@@ -1,0 +1,73 @@
+.slide1_text {
+    margin: 250px;
+    background-color: transparent;
+}
+
+.slide1_text h2, .slide1_text h3 {
+    align-content: center;
+    text-align: center;
+    font-family: 'LexingtonC';
+    background-color: transparent;
+}
+
+h2 {
+    font-size: 75px;
+}
+
+h3 {
+    font-size: 50px;
+}
+
+.card {
+    min-height: 100vh;
+    font-size: 16px;
+}
+
+.slider-container {
+    overflow: hidden;
+    position: relative;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.swiper-pagination {
+    background-color: transparent;
+}
+
+.swiper-pagination-bullet {
+    opacity: 0.4 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: white !important;
+    opacity: 1 !important;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+    color: white;
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+    color: black;
+}
+
+.slide1, .slide2, .slide3, .slide4 {
+    background-size: cover;
+}
+
+.slide1 {
+    background-image: url("../images/header_page/shaurma_header.png");
+}
+
+.slide2 {
+    background-image: url("../images/header_page/black_shaverma.jpeg");
+}
+
+.slide3 {
+    background-image: url("../images/header_page/header.jpg");
+}
+
+.slide4 {
+    background-image: url("../images/header_page/XXL_shaverma.png");
+}

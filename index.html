@@ -4,60 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./images/icons/shawarma.ico" type="image/x-icon">
+    <link rel="icon" href="images/icons/shawarma.ico" type="image/x-icon">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/slider.css">
+    <link rel="stylesheet" href="thirdparty/swiper/swiper-bundle.css">
     <title>Шаурмания</title>
 </head>
 
 <body>
-    <div class="css-slider-wrapper">
-        <input type="radio" name="slider" class="slide-radio1" checked id="slider_1">
-        <input type="radio" name="slider" class="slide-radio2" id="slider_2">
-        <input type="radio" name="slider" class="slide-radio3" id="slider_3">
-        <input type="radio" name="slider" class="slide-radio4" id="slider_4">
-        <div class="slider-pagination">
-            <label for="slider_1" class="page1"></label>
-            <label for="slider_2" class="page2"></label>
-            <label for="slider_3" class="page3"></label>
-            <label for="slider_4" class="page4"></label>
-        </div>
-
-        <div class="next control">
-            <label for="slider_1" class="numb1">&#10095;</label>
-            <label for="slider_2" class="numb2">&#10095;</label>
-            <label for="slider_3" class="numb3">&#10095;</label>
-            <label for="slider_4" class="numb4">&#10095;</label>
-        </div>
-        <div class="previous control">
-            <label for="slider_1" class="numb1">&#10094;</label>
-            <label for="slider_2" class="numb2">&#10094;</label>
-            <label for="slider_3" class="numb3">&#10094;</label>
-            <label for="slider_4" class="numb4">&#10094;</label>
-        </div>
-
-        <div class="slider slide1 header">
-            <div>
-                <h2>Шаурмания</h2>
-                <h3>Заглядывай к нам почаще~</h3>
+    <div class="slider-container">
+        <div class="swiper-container">
+            <button class="swiper-button-prev swiper-button-white"></button>
+            <button class="swiper-button-next swiper-button-white"></button>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide card slide1">
+                    <div class="slide1_text">
+                        <h2>Шаурмания</h2>
+                        <h3>Заглядывай к нам почаще~</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide card slide2"></div>
+                <div class="swiper-slide card slide3"></div>
+                <div class="swiper-slide card slide4"></div>
             </div>
-        </div>
-        <div class="slider slide2">
-            <div>
-                <h2>CSS Slider without use of any javascript or jQuery</h2>
-            </div>
-        </div>
-        <div class="slider slide3">
-            <div>
-                <h2>Full screen animation slider</h2>
-            </div>
-        </div>
-        <div class="slider slide4">
-            <div>
-                <h2>css3 slider</h2>
-            </div>
+            <div class="swiper-pagination"></div>
         </div>
     </div>
 
+    <script type="module" src="JS/slider.js"></script>
 </body>
 
 </html>
