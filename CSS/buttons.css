@@ -5,13 +5,13 @@
     width: 20%;
     height: 10vh;
     text-align: center;
-    font-family: 'LexingtonC';
+    font-family: 'CursiveFont';
     font-size: 25px;
     transition: 0.5s;   
     background-size: 200% auto;
     color: white;
     border-radius: 10px;
-    background-image: linear-gradient(to right, #c50000 0%, #f60b0b 51%, #c50000 100%);
+    background-image: linear-gradient(to right, #bd1111 0%, #e41c1c 51%, #bd1111 100%);
 }
 
 #choice_btn:hover {
