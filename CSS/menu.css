@@ -1,0 +1,50 @@
+.menu{
+    position: absolute;
+    margin-left: 460px;
+    width: 590px;
+    height: 40px;
+    z-index: 90;
+    font-family: "CursiveFont";
+    font-size: 16pt;
+    background-color: #210808;
+    border-radius: 8px;
+}
+
+nav a{
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+    margin-top: 5px;
+    text-decoration: none;
+    text-align: center;
+    color: #adac7e;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #210808;
+    border-radius: 8px;
+    transition: 1.5s;
+}
+
+nav a:hover {
+    background-color: #9e2c2c;
+}
+
+a:nth-child(1) {
+    width: 100px;
+}
+
+a:nth-child(2) {
+    width: 80px;
+}
+
+a:nth-child(3) {
+    width: 200px;
+}
+
+a:nth-child(4) {
+    width: 80px;
+}
+
+a:nth-child(5) {
+    width: 100px;
+}

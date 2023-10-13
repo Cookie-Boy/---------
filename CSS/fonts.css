@@ -4,3 +4,10 @@
     font-style: normal; 
     font-weight: normal; 
   } 
+
+  @font-face {
+    font-family: "CursiveFont"; 
+    src: url("../fonts/CursiveFont.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+  } 
