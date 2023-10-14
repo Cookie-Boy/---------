@@ -14,3 +14,7 @@ document.getElementById('tg').onclick = function(event) {
 document.getElementById('mail').onclick = function(event) {
     window.open("https://ghenyadog@bk.ru", "_blank");
 }
+
+document.getElementById('git').onclick = function(event) {
+    window.open("https://github.com/Cookie-Boy/Shaverma", "_blank");
+}
