@@ -1,4 +1,4 @@
-#choice_btn {
+#choice_btn, #order_black_btn {
     display: block;
     position: relative;
     margin: -20vh auto;
@@ -14,8 +14,24 @@
     background-image: linear-gradient(to right, #bd1111 0%, #e41c1c 51%, #bd1111 100%);
 }
 
-#choice_btn:hover {
+#choice_btn:hover, #order_black_btn {
     background-position: right center;
     cursor: pointer;
 }
 
+#order_black_btn {
+    width: 50%;
+    height: 11vh;
+    margin: 0;
+    margin: -10vh auto;
+    opacity: 1;
+}
+
+@media screen and (max-width: 1024px) {
+    #choice-btn { 
+        width: 200px;
+        font-size: 10px;
+    }
+
+    /* h3 { font-size: 35px; } */
+}
