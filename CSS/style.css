@@ -1,7 +1,7 @@
 @import url("fonts.css");
 
 * {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     color: white;
     margin: 0;
     /* height: 100% */

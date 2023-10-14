@@ -19,3 +19,40 @@
     cursor: pointer;
 }
 
+.buttons{
+    display: flex;
+    position: absolute;
+    z-index: 400;
+    top: 90%;
+    width: 12%;
+    height: 5vh;
+    background-color: transparent ;
+    cursor: pointer;
+}
+
+#vk {
+    display: inline;
+    position: relative;
+    left: 5%;
+    width: 100%;
+
+}
+
+#vk:hover {
+    background-image: url("images/icons/vkpressed.png");
+    cursor: pointer;
+}
+
+#tg {
+    display: inline;
+    position: relative;
+    left:10%;
+    width: 100%;
+}
+
+#mail {
+    display: inline;
+    position: relative;
+    left:15%;
+    width: 100%;
+}
