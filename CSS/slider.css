@@ -26,6 +26,7 @@ h3 {
     z-index: 200;
     opacity: 0.8;
     box-shadow: 0 0 50px 50px black; /* второй - размытие, третий - форма */
+    background-color: black;
 }
 
 .slide2_text {
