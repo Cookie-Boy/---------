@@ -18,6 +18,39 @@ h3 {
     font-size: 50px;
 }
 
+.slide2_block {
+    position: absolute;
+    width: 40%;
+    margin: 0 60%;
+    height: 100%;
+    z-index: 200;
+    opacity: 0.8;
+    box-shadow: 0 0 50px 50px black; /* второй - размытие, третий - форма */
+}
+
+.slide2_text {
+    padding: 15vh 10px;
+}
+
+.slide2_text h3 {
+    align-content: center;
+    text-align: center;
+    font-family: 'CursiveFont';
+}
+
+.slide2_text p {
+    align-content: center;
+    text-align: center;
+    font-family: 'CursiveFont';
+    font-size: 20px;
+}
+
+.slide2_text .food_compos {
+    align-content: normal;
+    text-align: left;
+    font-size: 17px;
+}
+
 .card {
     min-height: 100vh;
     font-size: 16px;
@@ -62,6 +95,7 @@ h3 {
 
 .slide2 {
     background-image: url("../images/header_page/black_shaverma.jpeg");
+    opacity: 0.95;
 }
 
 .slide3 {
@@ -70,4 +104,14 @@ h3 {
 
 .slide4 {
     background-image: url("../images/header_page/XXL_shaverma.png");
+}
+
+@media screen and (max-width: 1024px) {
+    h2 { font-size: 60px; }
+    h3 { font-size: 35px; }
+}
+
+@media screen and (max-width: 600px) {
+    h2 { font-size: 40px; }
+    h3 { font-size: 18px; }
 }

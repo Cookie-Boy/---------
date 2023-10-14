@@ -15,6 +15,10 @@ document.getElementById('mail').onclick = function(event) {
     window.open("https://ghenyadog@bk.ru", "_blank");
 }
 
+document.getElementById('order_black_btn').onclick = function(event) {
+    window.open("../order.html");
+}
+
 document.getElementById('git').onclick = function(event) {
     window.open("https://github.com/Cookie-Boy/Shaverma", "_blank");
 }
