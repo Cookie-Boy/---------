@@ -1,6 +1,6 @@
 let element = document.createElement("div");
 element.classList.add("first");
 
-let shawaList = document.getElementById("shawa-list");
+let purchaseList = document.getElementById("purchase-list");
 
-shawaList.appendChild(element);
+purchaseList.appendChild(element);
