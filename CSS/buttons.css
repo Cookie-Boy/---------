@@ -53,14 +53,10 @@
 }
 
 #git {
-    font-family: "CursiveFont";
-    font-size: 22pt;
     display: inline;
     position: relative;
-    text-align: center;
-    color:black;
     left:20%;
-    width: 100%;
+    width: 80%;
 }
 
 #order_black_btn {

@@ -16,7 +16,7 @@ document.getElementById('mail').onclick = function(event) {
 }
 
 document.getElementById('order_black_btn').onclick = function(event) {
-    window.open("../order.html");
+    window.open("order.html ","_blank");
 }
 
 document.getElementById('git').onclick = function(event) {
