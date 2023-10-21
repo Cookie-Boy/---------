@@ -11,3 +11,10 @@
     font-style: normal; 
     font-weight: normal; 
   } 
+
+  @font-face {
+    font-family: "Description"; 
+    src: url("../fonts/DescriptionFont.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+  } 

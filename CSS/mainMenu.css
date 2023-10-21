@@ -1,0 +1,67 @@
+.menu{
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 37%;
+    height: 5.5%;
+    z-index: 90;
+    font-family: "CursiveFont";
+    font-size: 16pt;
+    background-color: #210808;
+    border-radius: 8px;
+}
+
+nav a{
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+    margin-top: 5px;
+    text-decoration: none;
+    text-align: center;
+    color: #adac7e;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #210808;
+    border-radius: 8px;
+    transition: 1.5s;
+}
+nav a:hover {
+    background-color: #bc1515;
+}
+
+a:nth-child(1) {
+    width: 22.5%;
+}
+
+a:nth-child(2) {
+    width: 15%;
+}
+
+a:nth-child(3) {
+    width: 35%;
+}
+
+a:nth-child(4) {
+    width: 22.5%;
+}
+
+.basket-btn {
+    position: fixed;
+    width: 90px;
+    z-index: 90;
+    font-family: "CursiveFont";
+    font-size: 20px;
+    border-radius: 8px;
+    background-color: gray;
+    margin-left: 90%;
+    color: white;
+}
+
+.basket {
+    position: fixed;
+    z-index: 90;
+    font-family: "CursiveFont";
+    font-size: 16pt;
+    border-radius: 8px;
+}
