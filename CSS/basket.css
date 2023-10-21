@@ -1,0 +1,39 @@
+body {
+    background-image: url("../images/header_page/shaurma_header.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.main {
+    position: absolute;
+    direction: ltr;
+    border-radius: 25px;
+    margin-top: 15vh;
+    width: 99.45%;
+    background-color: white;
+    height: 100%;
+    z-index: 99;
+}
+
+.to_order_block {
+    position: absolute;
+    border-radius: 25px;
+    margin-top: 6vh;
+    margin-left: 73%;
+    background-color: gray;
+    width: 24%;
+    height: 35vh;
+    z-index: 100;
+}
+
+#shawa_list {
+    position: absolute;
+    border-radius: 25px;
+    background-color: yellow;
+    z-index: 100;
+    width: 70%;
+    min-height: max-content;
+    margin-left: 1%;
+    margin-top: 6vh;
+}
