@@ -1,20 +1,25 @@
-#choice_btn, #order_black_btn {
+#choice_btn, .to_order_btn {
     display: block;
     position: relative;
-    margin: -20vh auto;
     width: 20%;
     height: 10vh;
     text-align: center;
     font-family: 'CursiveFont';
     font-size: 25px;
-    transition: 0.5s;   
+    transition: 0.5s;
+    border-radius: 10px;
+    background: rgba(255, 0, 0, 1.0);
+    opacity: 1 !important;
+}
+
+#choice_btn {
+    margin: -20vh auto;
     background-size: 200% auto;
     color: white;
-    border-radius: 10px;
     background-image: linear-gradient(to right, #bd1111 0%, #e41c1c 51%, #bd1111 100%);
 }
 
-#choice_btn:hover, #order_black_btn {
+#choice_btn:hover, .to_order_btn {
     background-position: right center;
     cursor: pointer;
 }
@@ -63,12 +68,26 @@
     width: 100%;
 }
 
-#order_black_btn {
+.order_black_btn {
     width: 50%;
     height: 11vh;
-    margin: 0;
     margin: -10vh auto;
-    opacity: 1;
+}
+
+.order_color_btn {
+    width: 25%;
+    margin: 38vh auto 0 auto;
+}
+
+.to_order_btn:hover {
+    background-image: none;
+    background-color: #210808;
+    opacity: 1 !important;
+}
+
+.order_big_btn {
+    width: 50%;
+    margin: 10vh auto;
 }
 
 @media screen and (max-width: 1024px) {
