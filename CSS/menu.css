@@ -1,8 +1,10 @@
 .menu{
     position: fixed;
-    margin-left: 460px;
-    width: 590px;
-    height: 40px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 37%;
+    height: 5.5%;
     z-index: 90;
     font-family: "CursiveFont";
     font-size: 16pt;
@@ -30,28 +32,24 @@ nav a:hover {
 }
 
 a:nth-child(1) {
-    width: 100px;
+    width: 15%;
 }
 
 a:nth-child(2) {
-    width: 80px;
+    width: 12%;
 }
 
 a:nth-child(3) {
-    width: 200px;
+    width: 30%;
 }
 
 a:nth-child(4) {
-    width: 80px;
+    width: 12%;
 }
 
 a:nth-child(5) {
-    width: 100px;
-}
-
-a:nth-child(6) {
-    margin-left: 30px;
-    width: 100px;
+    margin-left: 2.5%;
+    width: 6%;
 }
 
 .basket {
