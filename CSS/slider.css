@@ -3,53 +3,93 @@
     background-color: transparent;
 }
 
-.slide1_text h2, .slide1_text h3 {
+.slider-container h2, .slider-container h3 {
     align-content: center;
     text-align: center;
     font-family: 'LexingtonC';
     background-color: transparent;
 }
 
-h2 {
+.slider-container h2 {
     font-size: 75px;
 }
 
-h3 {
+.slider-container h3 {
     font-size: 50px;
 }
 
-.slide2_block {
-    position: absolute;
-    width: 40%;
-    margin: 0 60%;
-    height: 100%;
-    z-index: 200;
-    opacity: 0.8;
-    box-shadow: 0 0 50px 50px black; /* второй - размытие, третий - форма */
-    background-color: black;
-}
-
-.slide2_text {
-    padding: 15vh 10px;
-}
-
-.slide2_text h3 {
-    align-content: center;
-    text-align: center;
-    font-family: 'CursiveFont';
-}
-
-.slide2_text p {
+.slider-container p {
     align-content: center;
     text-align: center;
     font-family: 'CursiveFont';
     font-size: 20px;
 }
 
+.slide2_block, .slide4_block {
+    position: absolute;
+    z-index: 200;
+    opacity: 0.8;
+    background-color: black;
+}
+
+.slide2_block {
+    width: 40%;
+    margin: 0 60%;
+    height: 100%;
+    box-shadow: 0 0 50px 50px black; /* второй - размытие, третий - форма */
+}
+
+.slide4_black_block {
+    width: 40%;
+    margin: 0 60%;
+    height: 100%;
+    box-shadow: 0 0 50px 50px black; /* второй - размытие, третий - форма */ 
+    background-color: black;
+    opacity: 0.8;
+}
+
+.slide2_text {
+    padding: 15vh 10px;
+}
+
+.slide2_text h3, .slide4_text h3 {
+    align-content: center;
+    text-align: center;
+    font-family: 'CursiveFont';
+}
+
 .slide2_text .food_compos {
     align-content: normal;
     text-align: left;
     font-size: 17px;
+}
+
+.slide3_text {
+    padding: 12vh;
+}
+
+.slide3_text h3 {
+    font-family: 'CursiveFont';
+    font-size: 75px;
+}
+
+.slide4_text {
+    padding-top: 15vh;
+    padding-left: 10px;
+}
+
+.slide4_block {
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    opacity: 1;
+    background-image: url("../images/header_page/XXL_shaverma.png");
+    background-size: cover;
+    transform: scale(-1, 1);
+}
+
+.slide4_black_block {
+    transform: scale(-1, 1);
 }
 
 .card {
@@ -100,11 +140,16 @@ h3 {
 }
 
 .slide3 {
-    background-image: url("../images/header_page/header.jpg");
+    background-image: url("../images/header_page/color-shawerma.jpeg");
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .slide4 {
+    position: absolute;
     background-image: url("../images/header_page/XXL_shaverma.png");
+    background-position: center -15vh;
+    transform: rotate(180deg);
 }
 
 @media screen and (max-width: 1024px) {

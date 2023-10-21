@@ -16,9 +16,17 @@ document.getElementById('mail').onclick = function(event) {
 }
 
 document.getElementById('order_black_btn').onclick = function(event) {
-    window.open("order.html ","_blank");
+    window.open("order.html", "_blank");
 }
 
 document.getElementById('git').onclick = function(event) {
     window.open("https://github.com/Cookie-Boy/Shaverma", "_blank");
 }
+
+Array.from(document.getElementsByClassName("to_order_btn")).forEach(
+    function(element) {
+        element.onclick = function(event) {
+            window.open("order.html", "_blank");
+        }
+    }
+)

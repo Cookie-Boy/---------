@@ -8,7 +8,6 @@
     font-size: 16pt;
     background-color: #210808;
     border-radius: 8px;
-    
 }
 
 nav a{
@@ -48,4 +47,17 @@ a:nth-child(4) {
 
 a:nth-child(5) {
     width: 100px;
+}
+
+a:nth-child(6) {
+    margin-left: 30px;
+    width: 100px;
+}
+
+.trolley {
+    position: fixed;
+    z-index: 90;
+    font-family: "CursiveFont";
+    font-size: 16pt;
+    border-radius: 8px;
 }
