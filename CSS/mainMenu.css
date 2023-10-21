@@ -5,7 +5,7 @@
     right: 0;
     width: 37%;
     height: 5.5%;
-    z-index: 90;
+    z-index: 200;
     font-family: "CursiveFont";
     font-size: 16pt;
     background-color: #210808;
@@ -48,7 +48,7 @@ a:nth-child(4) {
 
 .basket {
     position: fixed;
-    z-index: 90;
+    z-index: 200;
     font-family: "CursiveFont";
     font-size: 16pt;
     border-radius: 8px;
