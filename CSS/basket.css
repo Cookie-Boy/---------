@@ -83,6 +83,7 @@ body {
     width: 70%;
     margin-left: 1%;
     margin-top: 6vh;
+    padding-bottom: 5vh;
 }
 
 #basket-counter {
@@ -119,8 +120,23 @@ body {
     font-size: 25px;
     border-radius: 10px;
     text-align: center;
+    background-color: rgb(230, 230, 230);
+    color: rgb(130, 130, 130);
+    transition: 0.2s;
+}
+
+.counter-minus-active, .counter-plus-active {
     background-color: lightgray;
-    color: rgb(81, 81, 81);
+    color: black;
+}
+
+.counter-minus:hover, .counter-plus:hover {
+    cursor: auto;
+}
+
+.counter-minus-active:hover, .counter-plus-active:hover {
+    cursor: pointer;
+    background-color: rgb(180, 180, 180);
 }
 
 .counter-text {
@@ -130,7 +146,7 @@ body {
 
 .price-block {
     padding-top: 8.5vh;
-    width: 5%;
+    width: 6%;
     text-align: center;
     vertical-align: middle;
 }
