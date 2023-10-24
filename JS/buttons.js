@@ -18,4 +18,3 @@ document.getElementById('mail').onclick = function(event) {
 document.getElementById('git').onclick = function(event) {
     window.open("https://github.com/Cookie-Boy/Shaverma", "_blank");
 }
-
