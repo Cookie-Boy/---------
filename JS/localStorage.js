@@ -20,4 +20,4 @@ black = new shaverma('images/header_page/black_shaverma.jpeg', 'Вкусная �
 gigant = new shaverma('images/header_page/XXL_shaverma.png', 'Большая шаурма для больших мальчиков', 600, 600, 'лаваш, говядина, куриное филе, картошка фри, перец халапеньо, свежий помидор, маринованный огурчик, корейская морковка, острый соус');
 
 localStorage.setItem('black', JSON.stringify(black));
-localStorage.setItem('gigant', JSON.stringify(gigant));s
+localStorage.setItem('gigant', JSON.stringify(gigant));
