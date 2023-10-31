@@ -27,7 +27,7 @@
     </div>
     <div id="main">
         <div id="purchase-list">
-            <div id="basket-counter">Корзина: 2</div>
+            <div id="basket-counter">Корзина: 0</div>
         </div>
         <div class="to_order_block">
             <div id="text-goods">
@@ -40,13 +40,15 @@
             </div>
             <button onclick="window.location.href = 'order.html'" class="to_order_all_btn">Заказать</button>
         </div>
-        <div class="history_block">
-            <button class="history-btn">
-                <img class="history-image" src="images/icons/history.png" alt="История заказов">
-                История заказов
-            </button>
+        <button class="history-btn">
+            <img class="history-image" src="images/icons/history.png" alt="История заказов">
+            История заказов
+        </button>
+        <div id="history-list">
+            <div class="history-counter">Всего: 0</div>
         </div>
     </div>
 
-    <script src="JS/basket.js"></script>
+    <script type="module" src="JS/basket.js"></script>
+    <script src="JS/history.js"></script>
 </body>
