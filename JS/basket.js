@@ -7,6 +7,7 @@ const resultCost = document.getElementById("result-sum");
 
 let goods = JSON.parse(localStorage.getItem("goods"));
 let basket = JSON.parse(localStorage.getItem("basket"));
+let history = JSON.parse(localStorage.getItem("history"));
 
 function getResultSum() {
     let sum = 0;
@@ -136,16 +137,25 @@ if (count > 3) {
     mainList.style.height = String(30 * count) + "vh";
 }
 
-// doesn't work OK
 document.querySelector(".to_order_all_btn").addEventListener("click", () => {
-    let listItems = [];
-    for (let i = 0; i < localStorage.length - 1; i++) {
-        let currentNode = JSON.parse(localStorage.getItem(localStorage.key(i)));
+    for (let id in basket) {
+        let count = Object.keys(history).length;
+        history[count] = basket[id];
 
-        if (currentNode.isSelected == true)
-            listItems.push(currentNode);
+        const date = new Date();
+        let fullDate = date.getDate() + "-" + date.getMonth() + "-" + date.getFullYear();
+        history[count]['date'] = fullDate;
+
+        delete basket[id];
     }
-    console.log(JSON.parse(localStorage.getItem("_history")));
-})
+
+    Array.from(document.querySelectorAll(".item")).forEach((element) => {
+        purchaseList.removeChild(element);
+    });
+
+    localStorage.setItem("history", JSON.stringify(history));
+    localStorage.setItem("basket", JSON.stringify(basket));
+    setAllQuantitative();
+});
 
 setAllQuantitative();

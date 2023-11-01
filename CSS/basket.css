@@ -229,6 +229,7 @@ body {
 /* Всплывающее окно истории заказов */
 
 #history-list {
+    overflow-y: auto;
     position: fixed;
     left: 0;
     right: 0;
@@ -243,4 +244,39 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 1vh;
+}
+
+#history-counter {
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-family: 'CursiveFont';
+    font-size: 25px;
+    color: white;
+}
+
+.h-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 23vh;
+    border-radius: 25px;
+    z-index: 100;
+    font-size: 25px;
+}
+
+.hist-shava-image {
+    margin-top: 1%;
+    border-radius: 25px;
+    width: 30%;
+    height: 20vh;
+}
+
+.hist-item-text {
+    margin-top: 7vh;
+}
+
+.hist-shava-name, .hist-shava-price, .hist-shava-date {
+    text-align: center;
 }
