@@ -1,13 +1,17 @@
-let count = 0;
 const purchaseList = document.getElementById("purchase-list");
 const mainList = document.getElementById("main");
 const basketCounter = document.getElementById("basket-counter");
 const numberOfGoods = document.getElementById("number-goods");
 const resultCost = document.getElementById("result-sum");
+const clearAllButton = document.querySelector(".clear-all-btn");
 
 let goods = JSON.parse(localStorage.getItem("goods"));
 let basket = JSON.parse(localStorage.getItem("basket"));
 let history = JSON.parse(localStorage.getItem("history"));
+
+function getNumberOfElements() {
+    return Array.from(document.querySelectorAll(".item")).length;
+}
 
 function getResultSum() {
     let sum = 0;
@@ -29,6 +33,29 @@ function setAllQuantitative() {
     basketCounter.textContent = "Корзина: " + String(getQuantity());
     numberOfGoods.textContent = String(getQuantity()) + " шт.";
     resultCost.textContent = String(getResultSum()) + " р.";
+}
+
+function setClearButtonStyle() {
+    if (getNumberOfElements() > 0) {
+        clearAllButton.style.display = "block";
+    } else {
+        clearAllButton.style.display = "none";
+    }
+}
+
+function clearBasket() {
+    for (let id in basket) {
+        delete basket[id];
+    }
+
+    Array.from(document.querySelectorAll(".item")).forEach((element) => {
+        purchaseList.removeChild(element);
+    });
+
+    setClearButtonStyle();
+
+    localStorage.setItem("basket", JSON.stringify(basket));
+    setAllQuantitative();
 }
 
 for (let id in basket) {
@@ -92,7 +119,6 @@ for (let id in basket) {
     element.append(info, trashButton);
 
     purchaseList.appendChild(element);
-    count++;
 
     // Обработка нажатий на плюс и минус
 
@@ -129,11 +155,12 @@ for (let id in basket) {
         delete basket[id];
         purchaseList.removeChild(element);
         localStorage.setItem("basket", JSON.stringify(basket));
+        setClearButtonStyle();
         setAllQuantitative();
     });
 }
 
-if (count > 3) {
+if (count = getNumberOfElements() > 3) {
     mainList.style.height = String(30 * count) + "vh";
 }
 
@@ -145,17 +172,14 @@ document.querySelector(".to_order_all_btn").addEventListener("click", () => {
         const date = new Date();
         let fullDate = date.getDate() + "-" + date.getMonth() + "-" + date.getFullYear();
         history[count]['date'] = fullDate;
-
-        delete basket[id];
     }
 
-    Array.from(document.querySelectorAll(".item")).forEach((element) => {
-        purchaseList.removeChild(element);
-    });
-
+    clearBasket();
     localStorage.setItem("history", JSON.stringify(history));
-    localStorage.setItem("basket", JSON.stringify(basket));
-    setAllQuantitative();
 });
 
+
+clearAllButton.addEventListener("click", () => clearBasket());
+
 setAllQuantitative();
+setClearButtonStyle();

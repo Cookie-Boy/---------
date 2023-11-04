@@ -7,13 +7,15 @@ window.addEventListener("click", el => {
     const target = el.target;
     if (target.closest(".history-btn")) {
         historyList.style.display = "block";
-        document.body.style.overflow = "hidden";
+        document.body.position = "sticky";
+        // document.body.style.overflow = "hidden";
         mainList.style.pointerEvents = "none";
         historyList.style.pointerEvents = "all";
         
     } else if (!target.closest("#history-list")) {
         historyList.style.display = "none";
-        document.body.style.overflow = "visible";
+        document.body.position = "fixed";
+        // document.body.style.overflow = "visible";
         mainList.style.pointerEvents = "all";
     }
 });

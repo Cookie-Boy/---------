@@ -122,6 +122,12 @@ body {
     margin-top: 6vh;
 }
 
+.purchase-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 #basket-counter {
     margin-left: 2%;
     margin-top: 1%;
@@ -129,6 +135,26 @@ body {
     font-family: 'CursiveFont';
     font-size: 25px;
     color: white;
+}
+
+.clear-all-btn {
+    display: none;
+    width: 13%;
+    height: 5vh;
+    margin-top: 2vh;
+    margin-right: 3%;
+    text-align: center;
+    font-family: 'CursiveFont';
+    font-size: 20px;
+    border-radius: 12px;
+    border: 0;
+    background-color: lightgray;
+    color: black;
+    transition: 0.5s;
+}
+
+.clear-all-btn:hover {
+    background-color: rgb(180, 180, 180);
 }
 
 .item {
@@ -229,6 +255,7 @@ body {
 /* Всплывающее окно истории заказов */
 
 #history-list {
+    overflow-x: hidden;
     overflow-y: auto;
     position: fixed;
     left: 0;
@@ -261,7 +288,9 @@ body {
     justify-content: space-around;
     width: 100%;
     height: 23vh;
-    border-radius: 25px;
+    border-style: solid;
+    border-width: 2px;
+    border-bottom: white;
     z-index: 100;
     font-size: 25px;
 }
@@ -279,4 +308,35 @@ body {
 
 .hist-shava-name, .hist-shava-price, .hist-shava-date {
     text-align: center;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: grey;
+}
+
+#close-btn {
+    /* position: absolute; */
+    margin-left: auto;
+    margin-right: 0;
+    background-color: red;
+    color: white;
+    width: 6%;
+    height: 4vh;
+    z-index: 100;
 }
