@@ -1,23 +1,28 @@
 const mainList = document.getElementById("main");
+const historyBlock = document.getElementById("history-block");
 const historyList = document.getElementById("history-list");
 
 let history = JSON.parse(localStorage.getItem("history"));
 
+function getNumberOfElements() {
+    return Array.from(document.querySelectorAll(".h-item")).length;
+}
+
 window.addEventListener("click", el => {
     const target = el.target;
     if (target.closest(".history-btn")) {
-        historyList.style.display = "block";
-        document.body.position = "sticky";
-        // document.body.style.overflow = "hidden";
+        historyBlock.style.display = "block";
+        mainList.style.filter = "blur(10px)";
+        document.body.style.overflow = "hidden";
         mainList.style.pointerEvents = "none";
-        historyList.style.pointerEvents = "all";
-        
-    } else if (!target.closest("#history-list")) {
-        historyList.style.display = "none";
-        document.body.position = "fixed";
-        // document.body.style.overflow = "visible";
+        historyBlock.style.pointerEvents = "all"; // т.к. применяется ко всем дочерним блокам
+    } else if (!target.closest("#history-block") || target.closest("#close-btn")) {
+        historyBlock.style.display = "none";
+        document.body.style.overflow = "visible";
         mainList.style.pointerEvents = "all";
+        mainList.style.filter = "blur(0px)";
     }
+
 });
 
 for (let id in history) {
@@ -32,7 +37,7 @@ for (let id in history) {
 
     let headerBlock = document.createElement("div");
     headerBlock.classList.add("hist-shava-name");
-    let header = document.createElement("h5");
+    let header = document.createElement("p");
     header.textContent = history[id].name;
     header.classList.add("hist-item-text");
     headerBlock.append(header);
@@ -48,9 +53,14 @@ for (let id in history) {
     dateBlock.classList.add("hist-shava-date");
     let date = document.createElement("p");
     date.textContent = history[id].date;
-    date.classList.add("hist-item-text");
-    dateBlock.append(date);
+    date.classList.add("hist-item-date");
+    let hours = document.createElement("p");
+    hours.textContent = history[id].hours;
+    hours.classList.add("hist-item-hours");
+    dateBlock.append(date, hours);
 
     element.append(image, headerBlock, priceBlock, dateBlock);
     historyList.appendChild(element);
 }
+
+document.querySelector("#history-counter").textContent = "Всего заказов: " + getNumberOfElements();

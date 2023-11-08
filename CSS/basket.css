@@ -6,13 +6,17 @@ body {
     font-family: 'CursiveFont';
 }
 
+:root {
+    --size: calc(1vw + 1vh);
+}
+
 #main {
     position: absolute;
     direction: ltr;
     border-radius: 25px;
     margin-top: 15vh;
     width: 100%;
-    height: 100vh;
+    height: 150vh;
     background-image: url("../images/header_page/shawa_background.png");
     background-attachment: fixed;
     background-repeat: repeat;
@@ -80,11 +84,11 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     margin-left: 2%;
     border-radius: 25px;
     margin-top: 45vh;
     margin-left: 73%;
-    padding-top: 1.8vh;
     width: 24%;
     height: 8vh;
     z-index: 100;
@@ -100,6 +104,11 @@ body {
 .history-image {
     width: 8%;
     padding-right: 3%;
+    /* padding-top: 1vh; */
+}
+
+.history-text {
+    color: black;
 }
 
 .history-btn:hover {
@@ -114,12 +123,12 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     background-color: rgb(118, 29, 29);
-    /* height: 300vh; */
     border-radius: 25px;
     z-index: 100;
     width: 70%;
     margin-left: 1%;
     margin-top: 6vh;
+    padding-bottom: 1vh;
 }
 
 .purchase-header {
@@ -139,8 +148,8 @@ body {
 
 .clear-all-btn {
     display: none;
-    width: 13%;
-    height: 5vh;
+    width: 140px;
+    height: 35px;
     margin-top: 2vh;
     margin-right: 3%;
     text-align: center;
@@ -158,12 +167,11 @@ body {
 }
 
 .item {
-    position: relative;
-    height: 25vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .info {
-    position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -176,7 +184,7 @@ body {
 .shava-image {
     margin-top: 1%;
     border-radius: 25px;
-    width: 20%;
+    width: 25%;
     height: 20vh;
 }
 
@@ -184,7 +192,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 40%;
+    text-align: left;
+    width: 35%;
 }
 
 .text-block h5 {
@@ -195,13 +204,13 @@ body {
     width: 20%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .counter-minus, .counter-plus {
-    margin-top: 8vh;
-    width: 18%;
-    height: 5vh;
+    width: 40px;
+    height: 40px;
     font-size: 25px;
     border-radius: 10px;
     text-align: center;
@@ -225,24 +234,21 @@ body {
 }
 
 .counter-text {
-    margin-top: 8.5vh;
-    width: 10%;
     text-align: center;
     font-size: 20px;
 }
 
 .price-block {
-    padding-top: 8.5vh;
-    width: 6.5%;
-    text-align: center;
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
 }
 
 .trash-btn {
     position: absolute;
-    width: 2.5%;
+    width: 27px;
     margin-left: 96%;
-    margin-top: 18vh;
+    margin-top: 17vh;
     background-color: transparent;
     z-index: 200;
 }
@@ -254,89 +260,238 @@ body {
 
 /* Всплывающее окно истории заказов */
 
-#history-list {
-    overflow-x: hidden;
-    overflow-y: auto;
+#history-block {
+    /* filter: blur(50px); */
     position: fixed;
     left: 0;
     right: 0;
     display: none;
-    flex-direction: column;
-    justify-content: space-evenly;
     background-color: rgb(100, 100, 100);
-    border-radius: 25px;
-    z-index: 100;
+    border-radius: 10px;
+    z-index: 101;
     width: 55%;
-    height: 75vh;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1vh;
+    margin-top: 15vh;
+}
+
+.history-header {
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    /* flex-direction: row; */
+    /* justify-content: space-around; */
+    background-color: rgb(70, 15, 15);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 #history-counter {
-    margin-left: 2%;
-    margin-top: 1%;
     margin-bottom: 1%;
     font-family: 'CursiveFont';
     font-size: 25px;
     color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#close-btn {
+    background-color: transparent;
+    color: white;
+    width: 60px;
+    height: 6vh;
+    z-index: 100;
+    transition: 0.5s;
+    border-top-right-radius: 10px;
+}
+
+.close-image {
+    margin-top: 0.5vh;
+    width: 40%;
+}
+
+#close-btn:hover {
+    background-color: red;
+}
+
+.items {
+    height: 70vh;
+    overflow-y: scroll;
+}
+
+#history-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .h-item {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     width: 100%;
-    height: 23vh;
-    border-style: solid;
-    border-width: 2px;
-    border-bottom: white;
-    z-index: 100;
-    font-size: 25px;
+    /* height: 23vh; */
+    /* border-top-style: solid;
+    border-top-width: 2px;
+    border-top-color: white; */
+    font-size: calc(var(--size) * 1.2);
+    overflow: auto;
 }
 
 .hist-shava-image {
     margin-top: 1%;
     border-radius: 25px;
-    width: 30%;
-    height: 20vh;
+    width: calc(var(--size) * 12);
+    height: calc(var(--size) * 7);
 }
 
 .hist-item-text {
-    margin-top: 7vh;
-}
-
-.hist-shava-name, .hist-shava-price, .hist-shava-date {
+    /* margin-top: 7vh; */
+    vertical-align: middle;
     text-align: center;
 }
 
-::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: #F5F5F5;
+.hist-shava-name, .hist-shava-price, .hist-shava-date {
+    vertical-align: middle;
+    text-align: center;
 }
 
-::-webkit-scrollbar
-{
-	width: 12px;
-	background-color: #F5F5F5;
+.hist-shava-date {
+    /* margin-top: 5vh; */
+    display: flex;
+    flex-direction: column;
 }
 
-::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: grey;
+@media screen and (max-width: 1200px) {
+    #main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    #purchase-list {
+        width: 98%;
+    }
+
+    .price-block {
+        font-size: 16px;
+    }
+
+    .to_order_block, .history-btn {
+        width: calc(var(--size) * 22.5);
+    }
+
+    #purchase-list, .to_order_block, .history-btn {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 6vh;
+    }
+
+    #history-block {
+        /* width: calc(var(--size) * 40); */
+        width: 70%;
+    }
 }
 
-#close-btn {
-    /* position: absolute; */
-    margin-left: auto;
-    margin-right: 0;
-    background-color: red;
-    color: white;
-    width: 6%;
-    height: 4vh;
-    z-index: 100;
+@media screen and (max-width: 992px) {
+    .text-block {   
+        font-size: 13px;
+    }
+
+    #history-block {
+        width: 98%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #main {
+        padding-bottom: 5vh;
+    }
+
+    #purchase-list {
+        grid-gap: 3vh;
+    }
+
+    .purchase-header {
+        padding-bottom: 2vh;
+    }
+
+    .to_order_block, .history-btn {
+        width: 400px;
+    }
+
+    .history-btn {
+        font-size: calc(var(--size) * 2)
+    }
+
+    .text-block {
+        font-size: 20px;
+    }
+
+    .element-counter, .text-block {
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .element-counter {
+        justify-content: space-between;
+        width: 175px;
+    }
+
+    .text-block {
+        /* grid-gap: 1vh; */
+        width: 90%;
+        text-align: center;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        grid-gap: 4vh;
+        font-size: 20px;
+    }
+
+    .shava-image {
+        width: 50%;
+        height: 25vh;
+    }
+
+    .price-block {
+        font-size: 30px;
+    }
+
+    .trash-btn {
+        position: relative;
+        margin-left: 90%;
+        margin-top: 280px;
+        background-color: transparent;
+        z-index: 200;
+    }
+
+    #history-list {
+        grid-gap: 20px;
+    }
+
+    .h-item {
+        flex-direction: column;
+        justify-content: center;
+        grid-gap: 20px;
+        font-size: 25px;
+    }
+
+    .hist-shava-image {
+        width: 60%;
+        height: 20vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .to_order_block, .history-btn {
+        width: 98%;
+    }
 }

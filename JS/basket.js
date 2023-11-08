@@ -160,8 +160,8 @@ for (let id in basket) {
     });
 }
 
-if (count = getNumberOfElements() > 3) {
-    mainList.style.height = String(30 * count) + "vh";
+if (getNumberOfElements() > 3) {
+    mainList.style.height = String(30 * getNumberOfElements()) + "vh";
 }
 
 document.querySelector(".to_order_all_btn").addEventListener("click", () => {
@@ -171,7 +171,19 @@ document.querySelector(".to_order_all_btn").addEventListener("click", () => {
 
         const date = new Date();
         let fullDate = date.getDate() + "-" + date.getMonth() + "-" + date.getFullYear();
+        let hours = "в ";
+        if (date.getHours() < 10)
+            hours += "0" + date.getHours();
+        else
+            hours += date.getHours();
+
+        if (date.getMinutes() < 10)
+            hours += ":0" + date.getMinutes();
+        else
+            hours += ":" + date.getMinutes();
+
         history[count]['date'] = fullDate;
+        history[count]['hours'] = hours;
     }
 
     clearBasket();
