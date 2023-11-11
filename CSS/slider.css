@@ -135,7 +135,7 @@
 .slide1, .slide2, .slide3, .slide4 {
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: local;
 }
 
 .slide1 {
@@ -163,6 +163,16 @@
 @media screen and (max-width: 1200px) {
     #choice_btn {
         width: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #slide1 {
+        overflow: scroll;
+    }
+
+    .swiper-pagination {
+        margin-bottom: 200px;
     }
 }
 

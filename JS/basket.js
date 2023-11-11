@@ -64,13 +64,10 @@ for (let id in basket) {
     element.classList.add("item");
     element.id = "basket-" + id;
 
-    let info = document.createElement("div");
-    info.classList.add("info");
-
     let image = document.createElement("img"); // Фотка
     image.classList.add("shava-image");
     image.src = basket[id].imageSrc;
-    info.append(image);
+    element.append(image);
 
     let textBlock = document.createElement("div"); // Текстовый блок с названием и описанием
     let header = document.createElement("h5");
@@ -81,7 +78,7 @@ for (let id in basket) {
     weight.textContent = "Вес: " + basket[id].weight + " гр.";
     textBlock.classList.add("text-block");
     textBlock.append(header, composition, weight);
-    info.append(textBlock);
+    element.append(textBlock);
 
     let counter = document.createElement("div"); // Плюс минус
     counter.classList.add("element-counter");
@@ -100,23 +97,21 @@ for (let id in basket) {
     counterPlus.classList.add("counter-plus-active");
     counterPlus.textContent = "+";
     counter.append(counterMinus, counterText, counterPlus);
-    info.append(counter);
+    element.append(counter);
 
     let price = document.createElement("div"); // Цена
     price.classList.add("price-block");
     price.textContent = basket[id].cost * basket[id].quantity + " р.";
-    info.append(price);
+    element.append(price);
 
     let trashButton = document.createElement("button");
     trashButton.classList.add("trash-btn");
-
     let trashImage = document.createElement("img"); // Фотка
     trashImage.classList.add("trash-image");
     trashImage.src = "images/icons/trash.png";
     trashImage.alt = "Удалить";
     trashButton.append(trashImage);
-
-    element.append(info, trashButton);
+    element.append(trashButton);
 
     purchaseList.appendChild(element);
 

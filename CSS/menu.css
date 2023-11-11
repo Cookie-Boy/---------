@@ -1,53 +1,42 @@
-.shavaList{
+body {
+    background-image: url("../images/header_page/shaurma_header.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'CursiveFont';
+}
+
+.photo{
+    border-radius: 25px;
+}
+
+.background
+{
     position: absolute;
-    margin: 10%;
+    width: 100%;
+    margin-top: 10%;
+    border-radius: 25px;
+    background-image: url("../images/header_page/shawa_background.png");
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: cover;
+    z-index: 29;
+}
+.shavaList{
     z-index: 30;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-
 }
 
-.shavaObj2{
+.shavaObj{
+    background-color: white;
     width: 20%;
     height: 20%;
     border: 1px solid #210808;
     font-family: 'Description';
     font-size: small;
     color:black;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.shavaObj1{
-    width: 20%;
-    height: 20%;
-    border: 1px solid #210808;
-    font-family: 'Description';
-    font-size: small;
-    color:black;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.shavaObj0{
-    width: 20%;
-    height: 20%;
-    border: 1px solid #210808;
-    font-family: 'Description';
-    font-size: small;
-    color:black;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-
-.shavaObj2{
-    width: 20%;
-    height: 20%;
-    border: 1px solid #210808;
-    font-family: 'Description';
-    font-size: small;
-    color:black;
-    border-radius: 5px;
+    border-radius: 25px;
     margin-top: 20px;
 }

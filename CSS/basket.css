@@ -129,12 +129,14 @@ body {
     margin-left: 1%;
     margin-top: 6vh;
     padding-bottom: 1vh;
+    grid-gap: 1vh;
 }
 
 .purchase-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 #basket-counter {
@@ -168,24 +170,21 @@ body {
 
 .item {
     display: flex;
-    flex-direction: column;
-}
-
-.info {
-    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
-    height: 23vh;
     border-radius: 25px;
     z-index: 100;
+    align-items: center;
 }
 
 .shava-image {
     margin-top: 1%;
     border-radius: 25px;
-    width: 25%;
-    height: 20vh;
+    width: calc(var(--size) * 12.5);
+    /* width: 25%; */
+    /* height: 20vh; */
+    height: calc(var(--size) * 7);
 }
 
 .text-block {
@@ -193,6 +192,7 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     text-align: left;
+    grid-gap: 5px;
     width: 35%;
 }
 
@@ -239,16 +239,11 @@ body {
 }
 
 .price-block {
-    display: flex;
-    align-items: center;
     font-size: 20px;
 }
 
 .trash-btn {
-    position: absolute;
-    width: 27px;
-    margin-left: 96%;
-    margin-top: 17vh;
+    width: 30px;
     background-color: transparent;
     z-index: 200;
 }
@@ -374,6 +369,7 @@ body {
 
     #purchase-list {
         width: 98%;
+        grid-gap: 3vh;
     }
 
     .price-block {
@@ -395,12 +391,14 @@ body {
         /* width: calc(var(--size) * 40); */
         width: 70%;
     }
+
+    .shava-image {
+        width: calc(var(--size) * 17);
+        height: calc(var(--size) * 8);
+    }
 }
 
 @media screen and (max-width: 992px) {
-    .text-block {   
-        font-size: 13px;
-    }
 
     #history-block {
         width: 98%;
@@ -410,10 +408,6 @@ body {
 @media screen and (max-width: 768px) {
     #main {
         padding-bottom: 5vh;
-    }
-
-    #purchase-list {
-        grid-gap: 3vh;
     }
 
     .purchase-header {
@@ -428,10 +422,6 @@ body {
         font-size: calc(var(--size) * 2)
     }
 
-    .text-block {
-        font-size: 20px;
-    }
-
     .element-counter, .text-block {
         align-items: center;
         justify-content: space-around;
@@ -443,34 +433,28 @@ body {
     }
 
     .text-block {
-        /* grid-gap: 1vh; */
         width: 90%;
         text-align: center;
     }
 
-    .info {
+    .item {
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
         grid-gap: 4vh;
-        font-size: 20px;
     }
 
     .shava-image {
-        width: 50%;
-        height: 25vh;
+        width: 400px;
+        height: 200px;
     }
 
     .price-block {
         font-size: 30px;
     }
 
-    .trash-btn {
-        position: relative;
-        margin-left: 90%;
-        margin-top: 280px;
-        background-color: transparent;
-        z-index: 200;
+    .price-block p {
+        margin-top: 0;
     }
 
     #history-list {
@@ -493,5 +477,9 @@ body {
 @media screen and (max-width: 480px) {
     .to_order_block, .history-btn {
         width: 98%;
+    }
+
+    .shava-image {
+        width: 80%;
     }
 }
