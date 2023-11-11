@@ -63,4 +63,4 @@ for (let id in history) {
     historyList.appendChild(element);
 }
 
-document.querySelector("#history-counter").textContent = "Всего заказов: " + getNumberOfElements();
+document.querySelector("#history-counter").textContent = "Всего товаров: " + getNumberOfElements();
