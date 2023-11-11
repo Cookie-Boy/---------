@@ -1,12 +1,21 @@
 @import url("fonts.css");
 
 * {
-    background-color: rgb(247, 248, 234);
+
     color: white;
     margin: 0;
     /* height: 100% */
 }
 
+.background {
+        background-color: rgb(247, 248, 234);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+}
+.text {
+    z-index: 1;
+}
 a {
     text-decoration: none;
     color: white;

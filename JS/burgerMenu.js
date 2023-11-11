@@ -1,3 +1,7 @@
 let burgerMenu = document.querySelector('.burgerMenu');
+let temno = document.querySelector('.temno');
+let menu = document.querySelector('.menu');
 
-burgerMenu.addEventListener('click', function(){document.querySelector('.menu').classList.toggle('active'); document.querySelector('.temno').classList.toggle("active")})
+burgerMenu.addEventListener('click', function() { 
+                                                    menu.classList.toggle('active');
+                                                    temno.classList.toggle("active");})
