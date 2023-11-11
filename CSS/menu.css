@@ -8,6 +8,17 @@
 
 }
 
+.shavaObj2{
+    width: 20%;
+    height: 20%;
+    border: 1px solid #210808;
+    font-family: 'Description';
+    font-size: small;
+    color:black;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
 .shavaObj1{
     width: 20%;
     height: 20%;
