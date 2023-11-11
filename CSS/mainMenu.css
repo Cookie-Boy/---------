@@ -1,5 +1,9 @@
 .menu {
     position: fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
     margin: auto;
     left: 0;
     right: 0;
@@ -9,7 +13,7 @@
     font-family: "CursiveFont";
     font-size: 16pt;
     background-color: #210808;
-    border-radius: 8px;
+    border-radius: 15px;
 }
 
 nav a {
@@ -56,7 +60,7 @@ a:nth-child(4) {
 
 .basket-btn {
     position: fixed;
-    width: 5%;
+    width: 78px;
     height: 5.5%;
     margin-top: 0.3vh;
     margin-left: 89.5%;
@@ -82,3 +86,27 @@ a:nth-child(4) {
     background-color: #bc1515;
 }
 
+@media screen and (max-width: 1200px) {
+    .menu {
+        flex-direction: column;
+        height: 14vh;
+        width: 445px;
+    }
+    nav a {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* @media screen and (max-width: 600px) {
+    h2 { font-size: 40px; }
+    h3 { font-size: 18px; }
+} */
+
+@media screen and (max-width: 480px) {
+    .menu {
+        width: 100%;
+    }
+
+    
+}
