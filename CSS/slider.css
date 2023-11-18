@@ -2,6 +2,78 @@
     --size: calc(1vw + 1vh);
 }
 
+.buttons {
+    display: flex;
+    position: absolute;
+    z-index: 400;
+    bottom: 5%;
+    height: 5vh;
+    background-color: transparent;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-gap: 15px;
+}
+
+#choice_btn, .to_order_btn {
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 10vh;
+    text-align: center;
+    font-family: 'CursiveFont';
+    font-size: 25px;
+    transition: 0.5s;
+    border-radius: 10px;
+    background: rgba(255, 0, 0, 1.0);
+    z-index: 1000;
+    opacity: 1 !important;
+}
+
+#choice_btn {
+    margin: -20vh auto;
+    background-size: 200% auto;
+    color: white;
+    background-image: linear-gradient(to right, #bd1111 0%, #e41c1c 51%, #bd1111 100%);
+}
+
+#choice_btn:hover, .to_order_btn {
+    background-position: right center;
+    cursor: pointer;
+}
+
+.order_black_btn {
+    width: 25%;
+    height: 11vh;
+    margin-top: -10vh;
+    margin-left: 67%;
+}
+
+.order_color_btn {
+    width: 25%;
+    margin: 38vh auto 0 auto;
+}
+
+.to_order_btn:hover {
+    background-image: none;
+    background-color: #210808;
+    opacity: 1 !important;
+}
+
+.order_big_btn {
+    width: 25%;
+    margin-top: 10vh;
+    margin-left: 13%;
+}
+
+#vk, #tg, #mail, #git {
+    width: 60px;
+}
+
+#git {
+    width: 50px;
+}
+
 .slide1_text {
     margin: 25vh auto;
     background-color: transparent;
@@ -28,14 +100,14 @@
     align-content: center;
     text-align: center;
     font-family: 'CursiveFont';
-    font-size: 20px;
+    font-size: calc(var(--size) * 1);
 }
 
 .slide2_block, .slide4_block {
     position: absolute;
-    z-index: 200;
     opacity: 0.8;
     background-color: black;
+    height: 100%;
 }
 
 .slide2_block {
@@ -46,16 +118,22 @@
 }
 
 .slide4_black_block {
-    width: 40%;
-    margin: 0 60%;
+    position: absolute;
+    width: 50%;
+    /* margin: 0 60%; */
     height: 100%;
     box-shadow: 0 0 50px 50px black; /* второй - размытие, третий - форма */ 
     background-color: black;
     opacity: 0.8;
+    z-index: 1000;
 }
 
 .slide2_text {
-    padding: 15vh 10px;
+    position: relative;
+    margin: 15vh 10px;
+    margin-right: 40px;
+    margin-left: 60%;
+    z-index: 1000;
 }
 
 .slide2_text h3, .slide4_text h3 {
@@ -71,23 +149,26 @@
 }
 
 .slide3_text {
-    padding: 12vh;
+    margin: 8vh;
 }
 
 .slide3_text h3 {
     font-family: 'CursiveFont';
     font-size: 75px;
+    font-size: calc(var(--size) * 5);
 }
 
 .slide4_text {
-    padding-top: 15vh;
-    padding-left: 10px;
+    position: relative;
+    width: 45%;
+    margin-top: 15vh;
+    z-index: 1000;
+    margin-left: 40px;
 }
 
 .slide4_block {
     width: 100%;
     margin: 0;
-    /* height: 100%; */
     opacity: 1;
     background-image: url("../images/header_page/XXL_shaverma.png");
     background-size: cover;
@@ -107,7 +188,7 @@
     overflow: hidden;
     position: relative;
     max-width: 100%;
-    padding: 0;
+    /* padding: 0; */
     margin: 0;
 }
 
@@ -135,7 +216,6 @@
 .slide1, .slide2, .slide3, .slide4 {
     background-size: cover;
     background-position: center;
-    background-attachment: local;
 }
 
 .slide1 {
@@ -164,17 +244,135 @@
     #choice_btn {
         width: 300px;
     }
+
+    .slide2_block {
+        width: 50%;
+        margin-left: 50%;
+    }
+
+    .slide2_text {
+        margin-right: 40px;
+        margin-left: 50%;
+    }
+
+    .slide2_text p {
+        text-align: center !important;
+    }
+
+    .slide3_text {
+        margin: calc(var(--size) * 5);
+    }
+
+    .order_black_btn {
+        margin-left: 60%;
+    }
 }
 
+/* @media screen and ((max-width: 768px) or (min-height: 1000px)) { */
 @media screen and (max-width: 768px) {
-    #slide1 {
-        overflow: scroll;
+    .buttons {
+        left: 50%;
+        transform: translate(-50%, 0%);
     }
 
-    .swiper-pagination {
-        margin-bottom: 200px;
+    #vk, #tg, #mail {
+        width: calc(var(--size) * 4) !important;
+    }
+    
+    #git {
+        width: calc(var(--size) * 3) !important;
+    }
+
+    .slide2_block, .slide4_black_block {
+        margin: 0;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .slide2_text {
+        margin-top: 50px;
+        margin-left: 40px;
+    }
+
+    .slide2_text h3 {
+        font-size: calc(var(--size) * 3);
+    }
+
+    .slide2_text p {
+        font-size: calc(var(--size) * 1.5);
+    }
+
+
+    .slide3_text {
+        margin: calc(var(--size) * 5.5);
+    }
+
+    .slide3_text h3, .slide4_text h3 {
+        font-size: calc(var(--size) * 4);
+    }
+
+    .slide3_text p, .slide4_text p {
+        font-size: calc(var(--size) * 1.5);
+    }
+
+    .slide4_text {
+        width: 85%;
+        margin-left: 40px;
+    }
+
+    #choice_btn, .to_order_btn {
+        width: calc(var(--size) * 25);
+        font-size: calc(var(--size) * 2);
+    }
+
+    .order_black_btn, .order_big_btn {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
+/* 
+@media screen and (max-height: 1000px) {
+    .slide2_block, .slide4_block {
+        top: 10%;
+    }
+} */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
+    .swiper-pagination, .swiper-button-next, .swiper-button-prev {
+        display: none !important;
+    }
+
+    .buttons {
+        bottom: 10px !important;
+    }
+
+    .slide2_text, .slide4_text {
+        margin-top: 15%;
+    }
+
+    .slide2_text .food_compos, .slide2_text br {
+        display: none;
+    }
+
+    .slide4_text {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    .slide2_text p, .slide4_text p {
+        margin-top: 5vh;
+    }
+
+    .order_black_btn {
+        margin-top: 3vh;
+    }
+
+    .order_color_btn {
+        margin-top: 35vh;
+    }
+
+    .order_big_btn {
+        margin-top: 16vh;
+    }
 }

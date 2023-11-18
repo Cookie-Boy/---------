@@ -1,7 +1,5 @@
 let goods = JSON.parse(localStorage.getItem("goods"));
 let basket = JSON.parse(localStorage.getItem("basket"));
-for (let i = 0; i < 2; i++)
-{
 for (let id in goods) {
     let element = document.createElement('div');
     element.classList.add('shavaObj');
@@ -50,5 +48,4 @@ for (let id in goods) {
 
     let shavaList = document.getElementById('shavaList');
     shavaList.appendChild(element);
-}
 }

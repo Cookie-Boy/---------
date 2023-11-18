@@ -8,7 +8,7 @@ let swiper = new Swiper(slider, {
     modules: [Pagination, Navigation],
     loop: true, 
     slidesPerView: 1,
-	allowTouchMove: true,
+	  allowTouchMove: true,
 	// autoplay: {
 	// 	delay: 5000,
 	// },
