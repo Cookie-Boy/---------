@@ -1,6 +1,7 @@
 let goods = JSON.parse(localStorage.getItem("goods"));
 let basket = JSON.parse(localStorage.getItem("basket"));
-
+for(let c = 0; c < 3; c++)
+{
 for (let id in goods) {
     let element = document.createElement('div');
     element.classList.add('shavaObj');
@@ -77,6 +78,13 @@ for (let id in goods) {
                                                                             document.body.style.overflow = "auto";               
                                                                             });
 
+    document.getElementById('shadow').addEventListener("click", function() {let info = document.getElementById('shava' + id);
+                                                                            info.style.display = 'none';
+                                                                            document.getElementById('shadow').style.display = 'none'; 
+                                                                            dark.style.display = 'none'; 
+                                                                            document.body.style.overflow = "auto";               
+                                                                            });
+
     element.append(img);
     shavaInfo.style.display = 'none';
 
@@ -132,4 +140,5 @@ for (let id in goods) {
     shavaList.appendChild(element);
     shavaList.appendChild(shavaInfo);
     shavaList.append(dark);
+}
 }
