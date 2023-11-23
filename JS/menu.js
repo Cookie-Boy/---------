@@ -1,6 +1,5 @@
 let goods = JSON.parse(localStorage.getItem("goods"));
 let basket = JSON.parse(localStorage.getItem("basket"));
-
 for (let id in goods) {
     let element = document.createElement('div');
     element.classList.add('shavaObj');
@@ -71,6 +70,13 @@ for (let id in goods) {
                                                     });
     
     dark.addEventListener("click", function() {let info = document.getElementById('shava' + id);
+                                                                            info.style.display = 'none';
+                                                                            document.getElementById('shadow').style.display = 'none'; 
+                                                                            dark.style.display = 'none'; 
+                                                                            document.body.style.overflow = "auto";               
+                                                                            });
+
+    document.getElementById('shadow').addEventListener("click", function() {let info = document.getElementById('shava' + id);
                                                                             info.style.display = 'none';
                                                                             document.getElementById('shadow').style.display = 'none'; 
                                                                             dark.style.display = 'none'; 

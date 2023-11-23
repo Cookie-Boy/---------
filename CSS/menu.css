@@ -59,7 +59,7 @@ body {
     width: 28%;
     color:blue;
     position: absolute;
-    bottom: 30%;
+    bottom: calc(var(--size)*5.8);
     right: 2%;
     background-color: #212121;
     font-size: larger;
@@ -124,7 +124,7 @@ body {
     display: none;
     z-index: 99999;
     width: 60%;
-    height: 70%;
+    height: calc(var(--size)*20);
 }
 
 .shavaInfo img{
@@ -140,25 +140,25 @@ body {
     left: 35%;
     top: 0%;
     color: #ff4d00;
-    font-size:xx-large;
+    font-size: calc(var(--size)*1.5);
     z-index: 1;
 }
 
 .weighti{
     position: absolute;
     color: white;
-    bottom: 25%;
+    bottom: 12vh;
     left: 5%;
-    font-size: x-large;
+    font-size: calc(var(--size)*1.15);
     z-index: 1;
 }
 
 .costi{
     position: absolute;
     color: white;
-    bottom: 25%;
-    left: 59%;
-    font-size: x-large;
+    bottom: 12vh;
+    left: 58%;
+    font-size: calc(var(--size)*1.15);
     z-index: 1;
 }
 
@@ -167,7 +167,7 @@ body {
     color: #ff4d00;
     top: 13%;
     right: 0%;
-    font-size: large;
+    font-size: calc(var(--size)*0.83);
     width: 32%;
     z-index: 1;
 }
@@ -175,10 +175,14 @@ body {
 .descriptioni{
     position: absolute;
     color: #ff4d00;
-    bottom: 10%;
+    bottom: 7vh;
     left: 5%;
-    font-size: x-large;
+    font-size: calc(var(--size)*1.15);
     z-index: 1;
+}
+
+#shava1 .descriptioni{
+    bottom: 0vh;
 }
 
 .dark{
@@ -189,4 +193,183 @@ body {
     height: 100%;
     opacity: 30%;
     display: none;
+}
+
+@media screen and (min-width: 1520px) {
+    .name{
+        top: -15%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .background {
+        top: calc(var(--size)*3.6);
+        height: calc(var(--size)*22);
+        height: 90%;
+        overflow: scroll;
+        top: 5%;
+        overflow-x: hidden;
+    }
+
+    .shavaObj {
+        top: 1vh;
+        width: 30%;
+    }
+
+    .descriptioni {
+        bottom: 20%;
+    }
+
+    .compositioni {
+        font-size: calc(var(--size)*0.7);
+    }
+
+    .costi {
+        left: 55%;
+    }
+
+    .addButtoni {
+        max-height: 5%;
+        font-size: small;
+        bottom: calc(var(--size)*7);
+    }
+
+    .shavaInfo ,#shava0, #shava1, #shava2, #shava3, #shava4, #shava5{
+        height: calc(var(--size)*18.8);
+    }
+
+    .dark {
+        position: fixed;
+        top: -10%;
+        height: 110%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .background {
+        height: calc(var(--size)*38.5);
+        top: 7%;
+    }
+
+    .shavaObj {
+        width: 40%;
+    }
+
+    .shavaInfo ,#shava0, #shava1, #shava2, #shava3, #shava4, #shava5{
+        top: calc(var(--size)*18);
+        width: 75%;
+    }
+
+    .compositioni {
+        font-size: calc(var(--size)*0.85);
+    }
+
+    .addButtoni {
+        bottom: calc(var(--size)*6);
+    }
+
+    .descriptioni {
+        bottom: 16%;
+    }
+
+    #shava1 .descriptioni {
+        font-size: calc(var(--size)*1.1);
+    }
+
+    .costi {
+        bottom: 8vh;
+        font-size: calc(var(--size)*1.5);
+    }
+
+    .weighti {
+        bottom: 8vh;
+        font-size: calc(var(--size)*1.5);
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+
+
+    .background {
+        height: 90%;
+        overflow: scroll;
+        top: 1%;
+        overflow-x: hidden;
+    }
+
+    .shavaObj {
+        width: 70%;
+        margin-top: 30px;
+    }
+
+    .shavaInfo ,#shava0, #shava1, #shava2, #shava3, #shava4, #shava5 {
+        width: 90%;
+        height: calc(var(--size)*20);
+    }
+
+    .name {
+        top: -15%;
+        font-size: calc(var(--size)*1.5);
+    }
+
+    .weight {
+        font-size: calc(var(--size)*1.5);
+    }
+
+    .cost {
+        font-size: calc(var(--size)*1.5);
+    }
+
+    .addButton {
+        font-size: calc(var(--size)*1.1);
+        width: 40%;
+        min-height: calc(var(--size)*2.5);
+        bottom: calc(var(--size)*1.1);
+    }
+
+    .compositioni {
+        font-size: calc(var(--size));
+    }
+
+    .addButtoni {
+        bottom: calc(var(--size)*4);
+        font-size: calc(var(--size)*0.75);
+    }
+
+    .descriptioni {
+        font-size: calc(var(--size)*1.5);
+        bottom: 6%;
+    }
+
+    #shava1 .descriptioni {
+        font-size: calc(var(--size)*1.1);
+        bottom: 1%;
+    }
+
+    .costi {
+        left: 53%;
+    }
+}
+
+@media screen and (max-width: 624px) {
+
+    .shavaInfo ,#shava0, #shava1, #shava2, #shava3, #shava4, #shava5 {
+        height: calc(var(--size)*18);
+    }
+
+    .compositioni {
+        font-size: calc(var(--size)*0.8);
+    }
+
+    .addButtoni {
+        bottom: calc(var(--size)*5);
+        font-size: calc(var(--size)*0.75);
+    }
+
+    #shava1 .descriptioni {
+        font-size: calc(var(--size));
+    }
 }
