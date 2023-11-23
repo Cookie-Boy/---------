@@ -34,7 +34,7 @@ body {
     font-family: 'CursiveFont';
     font-size: medium;
     color:black;
-    margin-top: 20px;
+    margin-top: 23px;
 }
 
 .shavaObj img {
@@ -54,7 +54,25 @@ body {
     transition: 1.5s;
 }
 
+.addButtoni{
+    min-height: 10%;
+    width: 28%;
+    color:blue;
+    position: absolute;
+    bottom: 30%;
+    right: 2%;
+    background-color: #212121;
+    font-size: larger;
+    color: #adac7e;
+    border-radius: 50px;
+    transition: 1.5s;
+}
+
 .addButton:hover {
+    background-color: #bc1515;
+}
+
+.addButtoni:hover {
     background-color: #bc1515;
 }
 
@@ -63,7 +81,7 @@ body {
     position: absolute;
     bottom: 5%;
     left: 5%;
-    color: #adac7e;
+    color: white;
     z-index: 100;
 }
 
@@ -72,21 +90,23 @@ body {
     position: absolute;
     bottom: 5%;
     left: 80%;
-    color: #adac7e;
+    color: white;
     z-index: 100;
 }
 
 .name{
     position: absolute;
-    left: 30%;
-    color: #adac7e;
+    top: -17%;
+    left: 27%;
+    color: black;
+    font-size: larger;
     z-index: 100;
 }
 
 .shadow{
     background-image: linear-gradient(to right,black,  black );
     opacity: 50%;
-    z-index: 100;
+    z-index: 1;
     width: 100%;
     height: 100%;
     display: none;
@@ -100,21 +120,73 @@ body {
     background-repeat: repeat;
     background-size: cover;
     border-radius: 25px;
-    color:black;
+    color:#adac7e;
     display: none;
     z-index: 99999;
-    width: 50%;
+    width: 60%;
     height: 70%;
 }
 
 .shavaInfo img{
-    width: 10%;
-    z-index: 101;
+    width: 65%;
+    border-radius: 25px;
+    position: absolute;
+    top: 12%;
+    left: 3%;
 }
 
 .namei{
     position: absolute;
-    left: 30%;
-    color: black;
-    z-index: 101;
+    left: 35%;
+    top: 0%;
+    color: #ff4d00;
+    font-size:xx-large;
+    z-index: 1;
+}
+
+.weighti{
+    position: absolute;
+    color: white;
+    bottom: 25%;
+    left: 5%;
+    font-size: x-large;
+    z-index: 1;
+}
+
+.costi{
+    position: absolute;
+    color: white;
+    bottom: 25%;
+    left: 59%;
+    font-size: x-large;
+    z-index: 1;
+}
+
+.compositioni{
+    position: absolute;
+    color: #ff4d00;
+    top: 13%;
+    right: 0%;
+    font-size: large;
+    width: 32%;
+    z-index: 1;
+}
+
+.descriptioni{
+    position: absolute;
+    color: #ff4d00;
+    bottom: 10%;
+    left: 5%;
+    font-size: x-large;
+    z-index: 1;
+}
+
+.dark{
+    position: absolute;
+    background-color: #212121;
+    z-index: 900;
+    width: 100%;
+    height: 100%;
+    opacity: 30%;
+    display: none;
 }

@@ -1,11 +1,13 @@
 let goods = JSON.parse(localStorage.getItem("goods"));
 let basket = JSON.parse(localStorage.getItem("basket"));
-for(let count = 0; count < 3; count++)
-{
+
 for (let id in goods) {
     let element = document.createElement('div');
     element.classList.add('shavaObj');
     element.id = id;
+
+    let dark = document.createElement('div');
+    dark.classList.add('dark');
 
     const weight = document.createElement('div');
     const text = document.createTextNode(goods[id].weight + " г");
@@ -47,7 +49,7 @@ for (let id in goods) {
 
     const compositioni = document.createElement('div');
     compositioni.classList.add('compositioni');
-    const texti4 = document.createTextNode(goods[id].composition);
+    const texti4 = document.createTextNode('Состав: ' + goods[id].composition);
     compositioni.append(texti4);
 
     let shavaInfo = document.createElement('div');
@@ -63,12 +65,16 @@ for (let id in goods) {
     shavaInfo.append(weighti, costi, namei, descriptioni, compositioni, picture); 
     img.addEventListener("click", function() {let info = document.getElementById('shava' + id);
                                                 info.style.display = 'block';
-                                                document.getElementById('shadow').style.display = 'block';            
+                                                document.getElementById('shadow').style.display = 'block';
+                                                dark.style.display = 'block'; 
+                                                document.body.style.overflow = "hidden";          
                                                     });
     
-    document.getElementById('shadow').addEventListener("click", function() {let info = document.getElementById('shava' + id);
+    dark.addEventListener("click", function() {let info = document.getElementById('shava' + id);
                                                                             info.style.display = 'none';
-                                                                            document.getElementById('shadow').style.display = 'none';            
+                                                                            document.getElementById('shadow').style.display = 'none'; 
+                                                                            dark.style.display = 'none'; 
+                                                                            document.body.style.overflow = "auto";               
                                                                             });
 
     element.append(img);
@@ -84,14 +90,39 @@ for (let id in goods) {
         button.textContent = "Добавить в корзину";
     }
 
+    const buttoni = document.createElement("button");
+    buttoni.classList.add('addButtoni');
+
+    if (basket[id]) {
+        buttoni.textContent = "В корзине";
+    } else {
+        buttoni.textContent = "Добавить в корзину";
+    }
+
     element.append(button);
+    shavaInfo.append(buttoni);
 
     button.addEventListener("click", () => {
         if (!basket[id]) {
             button.textContent = "В корзине";
+            buttoni.textContent = "В корзине";
             basket[id] = goods[id];
         } else {
             button.textContent = "Добавить в корзину";
+            buttoni.textContent = "Добавить в корзину";
+            delete basket[id];
+        }
+        localStorage.setItem("basket", JSON.stringify(basket));
+    });
+
+    buttoni.addEventListener("click", () => {
+        if (!basket[id]) {
+            button.textContent = "В корзине";
+            buttoni.textContent = "В корзине";
+            basket[id] = goods[id];
+        } else {
+            button.textContent = "Добавить в корзину";
+            buttoni.textContent = "Добавить в корзину";
             delete basket[id];
         }
         localStorage.setItem("basket", JSON.stringify(basket));
@@ -99,7 +130,6 @@ for (let id in goods) {
 
     let shavaList = document.getElementById('shavaList');
     shavaList.appendChild(element);
-    let shavainfo = document.getElementById('shavaInfo');
-    shavainfo.appendChild(shavaInfo);
-}
+    shavaList.appendChild(shavaInfo);
+    shavaList.append(dark);
 }
