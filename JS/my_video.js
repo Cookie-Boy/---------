@@ -5,6 +5,7 @@ videoTimeline = container.querySelector(".video-timeline"),
 progressBar = container.querySelector(".progress-bar"),
 volumeBtn = container.querySelector(".volume i"),
 volumeSlider = container.querySelector(".left input"),
+volumeMsg = container.querySelector(".text-volume"),
 currentVidTime = container.querySelector(".current-time");
 videoDuration = container.querySelector(".video-duration"),
 skipBackward = container.querySelector(".skip-backward i"),
@@ -20,6 +21,9 @@ const hideControls = () => {
     if (mainVideo.paused) return;
     timer = setTimeout(() => {
         container.classList.remove("show-controls");
+        if (volumeMsg.classList.contains("show")) {
+            volumeMsg.classList.remove("show");
+        }
     }, 3000);
 }
 
@@ -179,9 +183,16 @@ document.addEventListener('keydown', function(event) {
     } else if (event.code == "KeyM") {
         volumeHandler();
     } else if (event.code == "ArrowUp" && mainVideo.volume < 1) {
-        mainVideo.volume += 0.05;
-        changeVolumeButton();
+        if (mainVideo.volume + 0.05 > 1) {
+            mainVideo.volume = 1;
+        }
+        else {
+            mainVideo.volume += 0.05;
+            changeVolumeButton();
+        }
         volumeSlider.value = mainVideo.volume;
+        volumeMsg.innerHTML = Math.floor(mainVideo.volume * 100) + "%";
+        volumeMsg.classList.add("show");
     } else if (event.code == "ArrowDown" && mainVideo.volume > 0) {
         if (mainVideo.volume - 0.05 <= 0) {
             volumeHandler();
@@ -190,6 +201,8 @@ document.addEventListener('keydown', function(event) {
             changeVolumeButton();
         }
         volumeSlider.value = mainVideo.volume;
+        volumeMsg.innerHTML = Math.floor(mainVideo.volume * 100) + "%";
+        volumeMsg.classList.add("show");
     }
     container.classList.add("show-controls");
     clearTimeout(timer);
