@@ -175,7 +175,7 @@ body {
 .descriptioni{
     position: absolute;
     color: #ff4d00;
-    bottom: 7vh;
+    bottom: 4vh;
     left: 5%;
     font-size: calc(var(--size)*1.15);
     z-index: 1;
@@ -183,6 +183,7 @@ body {
 
 #shava1 .descriptioni{
     bottom: 0vh;
+    font-size: calc(var(--size));
 }
 
 .dark{
@@ -205,11 +206,9 @@ body {
 
     .background {
         top: calc(var(--size)*3.6);
-        height: calc(var(--size)*22);
-        height: 90%;
-        overflow: scroll;
+        height: calc(var(--size)*23);
         top: 5%;
-        overflow-x: hidden;
+        overflow: hidden;
     }
 
     .shavaObj {
@@ -251,6 +250,8 @@ body {
     .background {
         height: calc(var(--size)*38.5);
         top: 7%;
+        overflow:scroll ;
+        overflow-x: hidden;
     }
 
     .shavaObj {
@@ -271,7 +272,7 @@ body {
     }
 
     .descriptioni {
-        bottom: 16%;
+        bottom: 11%;
     }
 
     #shava1 .descriptioni {

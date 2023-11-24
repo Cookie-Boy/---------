@@ -43,21 +43,6 @@ function setClearButtonStyle() {
     }
 }
 
-function clearBasket() {
-    for (let id in basket) {
-        delete basket[id];
-    }
-
-    Array.from(document.querySelectorAll(".item")).forEach((element) => {
-        purchaseList.removeChild(element);
-    });
-
-    setClearButtonStyle();
-
-    localStorage.setItem("basket", JSON.stringify(basket));
-    setAllQuantitative();
-}
-
 for (let id in basket) {
 
     let element = document.createElement("div");
@@ -181,7 +166,6 @@ document.querySelector(".to_order_all_btn").addEventListener("click", () => {
         history[count]['hours'] = hours;
     }
 
-    clearBasket();
     localStorage.setItem("history", JSON.stringify(history));
 });
 

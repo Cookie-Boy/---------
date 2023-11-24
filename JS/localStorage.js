@@ -25,7 +25,6 @@ if (localStorage.length != 0) {
     red = new Shaverma('Красная шаурма', 'images/header_page/redShawa.png', 'Шаурма для бойких, смелых и решительных', 340, 350, 'Красный лаваш, сочный томат, свежий лук, болгарский перец, листья салата, листья базилика, куриный наггетс, цветной соус', 1);
     green = new Shaverma('Зелёная шаурма', 'images/header_page/greenShawa.png', 'Шаурма для позитивных и весёлых', 340, 350, 'Зелёный лаваш, сочный томат, свежий лук, болгарский перец, листья салата, листья базилика, куриный наггетс, цветной соус', 1);
     blue = new Shaverma('Синяя шаурма', 'images/header_page/blueShawa.png', 'Шаурма для меланхоличных и чувственных', 340, 350, 'Синий лаваш, сочный томат, свежий лук, болгарский перец, листья салата, листья базилика, куриный наггетс, цветной соус', 1);    
-}
 
     let goods = new Object( {0: black, 1: bigBro, 2: gigant, 3:red, 4:green, 5:blue} );
     let basket = new Object();
@@ -34,3 +33,4 @@ if (localStorage.length != 0) {
     localStorage.setItem("goods", JSON.stringify(goods));
     localStorage.setItem("basket", JSON.stringify(basket));
     localStorage.setItem("history", JSON.stringify(history));
+}
