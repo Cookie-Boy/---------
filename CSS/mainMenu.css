@@ -7,6 +7,7 @@
     margin: auto;
     left: 0;
     right: 0;
+    top: 0;
     width: 37%;
     height: 5.5%;
     z-index: 200;
@@ -56,6 +57,7 @@ a:nth-child(4) {
     font-family: "CursiveFont";
     font-size: 16pt;
     border-radius: 8px;
+    top: 0;
 }
 
 .basket-btn {

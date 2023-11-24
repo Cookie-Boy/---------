@@ -8,17 +8,43 @@ let swiper = new Swiper(slider, {
     modules: [Pagination, Navigation],
     loop: true, 
     slidesPerView: 1,
-	  allowTouchMove: true,
+	allowTouchMove: true,
 	// autoplay: {
 	// 	delay: 5000,
 	// },
     pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+
+        360: {
+            pagination: {
+                enabled: false,
+            },
+            navigation: {
+                enabled: false,
+            },
+        },
+
+        480: {
+            pagination: {
+                enabled: true,
+            },
+            navigation: {
+                enabled: false,
+            },  
+        },
+
+        768: {
+            navigation: {
+                enabled: true,
+            },
+        },  
     },
 });

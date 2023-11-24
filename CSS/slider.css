@@ -338,10 +338,6 @@
 } */
 
 @media screen and (max-width: 480px) {
-    .swiper-pagination, .swiper-button-next, .swiper-button-prev {
-        display: none !important;
-    }
-
     .buttons {
         bottom: 10px !important;
     }
