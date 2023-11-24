@@ -62,10 +62,8 @@ for (let id in basket) {
 
     let textBlock = document.createElement("div"); // Текстовый блок с названием и описанием
     let header = document.createElement("h5");
-    let quantity = document.createTextNode(basket[id].quantity + " шт.");
-    let wrapper = document.createElement("div");
-    wrapper.append(quantity);
-    wrapper.classList.add("quantityCheck");
+    let quantity = document.createElement("div");
+    quantity.textContent = basket[id].quantity + " шт.";
     header.textContent = basket[id].name;
     header.style.width = "50%";
     let composition = document.createElement("p");
@@ -73,7 +71,7 @@ for (let id in basket) {
     let weight = document.createElement("p");
     weight.textContent = "Вес: " + basket[id].weight + " гр.";
     textBlock.classList.add("text-block");
-    textBlock.append(header, wrapper,composition, weight);
+    textBlock.append(header, composition, weight);
     element.append(textBlock);
 
     let counterText = document.createElement("h5");
@@ -83,7 +81,7 @@ for (let id in basket) {
     let price = document.createElement("div"); // Цена
     price.classList.add("price-block");
     price.textContent = basket[id].cost * basket[id].quantity + " р.";
-    element.append(price);
+    element.append(quantity, price);
     purchaseList.appendChild(element);
     setAllQuantity();
 }

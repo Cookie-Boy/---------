@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/fonts.css">
     <link rel="stylesheet" href="CSS/order.css">
-    <link rel="stylesheet" href="CSS/basket.css">
     <link rel="stylesheet" href="CSS/mainMenu.css">
     <title>Шаурмания</title>
 </head>
@@ -44,10 +43,16 @@
         
         <p class="cardText" id="cvv">cvv</p>
         <input type="text" data-format=" ***" data-mask=" ___" class="bankCard" id="cardCvv" placeholder="cvv">
+
+        <p class="customerName" id="Name">Имя</p>
+        <input type="text" data-formatn="************" data-maskn="   " class="bankCard" id="custName" placeholder="Имя">
+
+        <p class="Date" id="Date">Имя</p>
+        <input type="Date"  class="bankCard" id="Date" placeholder="дд.мм.гг">
     </div>
     </div>
     <script>
-        function doFormat(value, pattern, mask)
+            function doFormat(value, pattern, mask)
         {
             // удаляем все нечисловые значения из значения
             const strippedValue = value.replace(/[^0-9]/g, "");
@@ -87,11 +92,7 @@
             return formatted;
         }
 
-
-        // проходимся по каждому элементу назначая на них обработчики
-        // нажатия клавиш
         document.querySelectorAll('[data-mask]').forEach(function (e) {
-
 
             function format(elem) {
                 const val = doFormat(elem.value, elem.getAttribute('data-format'));
@@ -117,6 +118,7 @@
 
             format(e)
         });
+
     </script>
   <script type="module" src="JS/order.js"></script>
   <script src="JS/burgerMenu.js"></script>
