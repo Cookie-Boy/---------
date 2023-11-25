@@ -85,3 +85,25 @@ for (let id in basket) {
     purchaseList.appendChild(element);
     setAllQuantity();
 }
+
+const cal = document.querySelector(".cal");
+cal .addEventListener("click", function() {
+                                            document.querySelector(".calendar").style.zIndex = "100";
+                                            document.querySelector(".table").style.display = "block";
+                                            setTimeout(() => {document.querySelector(".calendar").style.zIndex = "-100";
+                                                                document.querySelector(".table").style.display = "none";}, 5 * 1000)
+                                        });
+
+document.getElementById("submit").addEventListener("click", function() {
+    document.getElementById("calDate").value = " ";
+    document.getElementById("number").value = " ";
+    document.getElementById("date").value = " ";
+    document.getElementById("cvv").value = " ";
+    document.getElementById("Name").value = " ";
+    document.getElementById("Date").value = " ";
+    document.getElementById("time").value = " ";
+    document.querySelectorAll(".box").value = " ";
+    localStorage.setItem("history",  JSON.stringify(basket));
+    localStorage.removeItem(basket);
+}
+)

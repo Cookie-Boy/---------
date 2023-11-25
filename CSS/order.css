@@ -4,6 +4,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   font-family: 'CursiveFont';
+  overflow-x: hidden;
 }
 
 :root {
@@ -107,7 +108,7 @@ body {
   border-color: #bc1515;
   position: absolute;
   width: 28%;
-  height: 90%;
+  height: 105%;
   z-index: 99;
   top: 18.87%;
   right: 0%;
@@ -145,7 +146,7 @@ body {
   width: 13%;
 }
 
-#number, #date, #cvv, #Name{
+#number, #date, #cvv, #Name, #Date, #time, #submit{
   font-size: calc(var(--size));
   position: relative;
   color:#bc1515;
@@ -153,8 +154,138 @@ body {
   width: 50%;
 }
 
+#submit {
+  border-radius: 25px;
+  background: #bc1515;
+  color: #adac7e;
+  font-family: cursive;
+  transform: translate(40%, 90%);
+}
+
 #cvv {
   font-size: calc(var(--size)*1.25);
+}
+
+#Time {
+  font-size: xx-large;
+}
+
+.check {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: x-large;
+  margin-left: 30px;
+}
+
+#Салфетки, #Соус, #Лаваш,  #Сухари, #Доставка {
+  width: 20%;
+  margin-top: 10px;
+  margin-left: 4px;
+}
+
+.box {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  width: 20%;
+}
+
+.box+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.box+label::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #c34040;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.box:checked+label::before {
+  border-color: #bc1515;
+  background-color: #bc1515;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.box:not(:disabled):not(:checked)+label:hover::before {
+  border-color: #bc1515;
+}
+
+.box:not(:disabled):active+label::before {
+  background-color: #bc1515;
+  border-color: #bc1515;
+}
+
+.box:focus+label::before {
+  box-shadow: 0 0 0 0.2rem rgba(188, 21, 21, 0.4);
+}
+
+.box:focus:not(:checked)+label::before {
+  border-color: #bc1515;
+}
+
+.box:disabled+label::before {
+  background-color: #bc1515;
+}
+
+#custName {
+  width: 40%;
+}
+
+.cal {
+  width: 10%;
+  position: relative;
+}
+
+.calw {
+display: inline;
+}
+
+.calendar {
+  position: absolute;
+  margin-top:88%;
+  margin-left: 30%;
+  display: flex;
+  width: 80%;
+  height: 37vh;
+  z-index: -100;
+  overflow-x: hidden;
+}
+
+.table {
+  display: none;
+  width: 80%;
+  height: 70%;
+  background-color: #bc1515;
+  border-color: transparent;
+  border-radius: 15px;
+  align-items: center;
+}
+
+.tHeader {
+  width: 60%;
+}
+
+.line {
+  text-align: center;
+  border-radius: 25px;
+  transition: 0.6s;
+}
+
+.line:hover {
+  background-color: #e20c0c;
+  transition: 0.6s;
 }
 
 @media screen and (max-width: 1200px) {
@@ -175,20 +306,11 @@ body {
       font-size: 16px;
   }
 
-  .to_order_block, .history-btn {
-      width: calc(var(--size) * 22.5);
-  }
-
-  #purchase-list, .to_order_block, .history-btn {
+  #purchase-list{
       position: relative;
       margin-left: auto;
       margin-right: auto;
       margin-top: 6vh;
-  }
-
-  #history-block {
-      /* width: calc(var(--size) * 40); */
-      width: 70%;
   }
 
   .shava-image {
