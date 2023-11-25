@@ -104,6 +104,7 @@ document.getElementById("submit").addEventListener("click", function() {
     document.getElementById("time").value = " ";
     document.querySelectorAll(".box").value = " ";
     localStorage.setItem("history",  JSON.stringify(basket));
-    localStorage.removeItem(basket);
+    localStorage.setItem("basket", JSON.stringify(new Object()));
+    window.location.href = 'menu.html';
 }
 )

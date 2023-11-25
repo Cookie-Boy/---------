@@ -12,6 +12,7 @@ body {
 }
 
 #main {
+  min-height: 101vh;
   position: relative;
   direction: ltr;
   border-radius: 25px;
@@ -289,12 +290,111 @@ display: inline;
 }
 
 @media screen and (max-width: 1200px) {
+
+  .ordering{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    bottom: 1%;
+  }
+
+
   #main {
       display: flex;
       flex-direction: column;
       align-items: center;
       height: auto;
       padding-bottom: 5vh;
+  }
+
+  .order {
+    position: absolute;
+    height: 10%;
+    left:40%;
+  }
+
+  #number, #date, #cvv, #Name, #Date, #time, #submit, #customName, #calData, #cardDate, #custName, #cardNumber  {
+  position: absolute;
+  }
+
+  #submit {
+    top:80%;
+  }
+
+  #number {
+    top: 10%;
+  }
+
+  #cardNumber {
+    top: 12%;
+  }
+
+  #date {
+    top: 23%;
+  }
+
+  #cardDate {
+    top: 28%;
+  }
+
+  #cvv {
+    top: 38%;
+  }
+
+  #cardCvv {
+    position: absolute;
+    top: 43%;
+  }
+
+  #Name {
+    top: 56%;
+  }
+
+  #custName {
+    top: 60%
+  }
+
+  #time {
+    top: 20%;
+    left: 80%;
+    width: 20%;
+  }
+
+  #Time {
+    position: absolute;
+    width: 10%;
+    top: 25%;
+    left: 80%;
+  }
+
+  #Date {
+    width: 20%;
+    left: 80%
+  }
+
+  #calDate {
+    width: 35%;
+    top: 10%;
+    transform: translate(40%);
+    /* left: calc(var(--size)*2.5); */
+  }
+
+  .cal {
+    width: 2%;
+    top: 9%;
+    right: calc(var(--size)*5);
+    position: absolute;
+  }
+
+  .calendar {
+    bottom: 25%;
+    width: 30%;
+    right: 20%;
+    height: 60%;
   }
 
   #purchase-list {
@@ -323,9 +423,38 @@ display: inline;
   #history-block {
       width: 98%;
   }
+  .check {
+    position: absolute;
+    width: 30%;
+    display: inline;
+    top: 30%;
+    left: 37%;
+    margin: 3px;
+
+  }
+
+  #calDate {
+    top:5%;
+  }
 }
 
 @media screen and (max-width: 768px) {
+
+  .order {
+    font-size: medium;
+    left: 34%;
+  }
+
+  #calDate {
+    font-size: small;
+    transform: translate(10%);
+    top: 4%;
+  }
+
+  .check {
+    font-size: medium;
+  }
+
   .purchase-header {
       padding-bottom: 2vh;
   }
